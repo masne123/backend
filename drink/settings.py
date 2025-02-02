@@ -34,7 +34,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'corsheaders',
-    'rest_framework_simplejwt',
     'drinkapp',
     'rest_framework',
     'django.contrib.admin',
@@ -75,7 +74,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000", 
+    "http://localhost:3000",
+     
 ]
 
 

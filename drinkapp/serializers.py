@@ -20,3 +20,10 @@ class PaymentSerializers(serializers.ModelSerializer):
     class Meta:
         model = Payment
         fields ='__all__' 
+
+    
+class MotorcycleTypeSerializers(serializers.ModelSerializer):
+
+    class Meta:
+        model = MotorcycleType
+        fields ='__all__'     
