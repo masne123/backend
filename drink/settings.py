@@ -14,7 +14,12 @@ SECRET_KEY = 'django-insecure-mt8dwjslum!+f&f+yp(ek+bh+z*^3=3^x=^u_s&+dlie34_(18
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['backend-up33.onrender.com', 'localhost', '127.0.0.1']
+=======
+ALLOWED_HOSTS = ['*']  # Allow all hosts
+
+>>>>>>> origin/main
 
 # Application definition
 INSTALLED_APPS = [
@@ -30,17 +35,27 @@ INSTALLED_APPS = [
     'rest_framework',  # REST framework for API functionality
 ]
 
+<<<<<<< HEAD
 # REST framework configuration
+=======
+# REST Framework settings
+>>>>>>> origin/main
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    'DEFAULT_AUTHENTICATION_CLASSES': [],  # No authentication required
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',  # Allow any user (authenticated or not)
     ],
+<<<<<<< HEAD
     # 'DEFAULT_PERMISSION_CLASSES': [
     #     'rest_framework.permissions.IsAuthenticated',
     # ],
 }
 
 # JWT configuration
+=======
+}
+
+>>>>>>> origin/main
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
@@ -60,6 +75,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+<<<<<<< HEAD
     'corsheaders.middleware.CorsMiddleware',  # Added CORS middleware
 ]
 
@@ -72,6 +88,14 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 # URL configuration
+=======
+    'corsheaders.middleware.CorsMiddleware',  # Ensure CORS is enabled
+]
+
+# CORS settings to allow all origins
+CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins
+
+>>>>>>> origin/main
 ROOT_URLCONF = 'drink.urls'
 
 # Templates settings
@@ -127,7 +151,12 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+<<<<<<< HEAD
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+=======
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+>>>>>>> origin/main
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
