@@ -80,6 +80,13 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://backend-up33.onrender.com',
+    'http://backend-up33.onrender.com',  # Include the non-https version if necessary
+]
+
+
+
 ROOT_URLCONF = 'drink.urls'
 
 TEMPLATES = [
